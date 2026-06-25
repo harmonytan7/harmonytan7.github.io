@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmony Tan Shi Le — Senior Software Engineer</title>
+  <meta name="description" content="Senior Software Engineer & Project Team Lead with 8 years of enterprise experience delivering precision-built digital products.">
+  <meta property="og:title" content="Harmony Tan Shi Le — Senior Software Engineer">
+  <meta property="og:description" content="8 years of enterprise-level experience. Biomedical engineering foundation meets full-stack execution.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral:        #D85A30;
+      --coral-dark:   #993C1D;
+      --coral-deeper: #712B13;
+      --coral-ink:    #3D1409;
+      --coral-bg:     #FAECE7;
+      --coral-border: #F0997B;
+      --coral-mid:    #F0997B;
+
+      --text-primary:   #1a1a1a;
+      --text-secondary: #555;
+      --text-tertiary:  #999;
+      --bg:             #fff;
+      --bg-subtle:      #fafafa;
+      --border:         #e5e5e5;
+      --border-mid:     #d0d0d0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary:   #f0f0f0;
+        --text-secondary: #aaa;
+        --text-tertiary:  #666;
+        --bg:             #111;
+        --bg-subtle:      #181818;
+        --border:         #2a2a2a;
+        --border-mid:     #333;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg-subtle);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* ── Page container — max 1280px, centered ──────────── */
+    .eb-page {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: var(--bg);
+      box-shadow: 0 0 0 1px var(--border);
+    }
+
+    /* ── Nav ────────────────────────────────────────────── */
+    .eb-nav {
+      display: flex;
+      align-items: center;
+      padding: 0 3rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .eb-nav a {
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      padding: 1rem 1rem;
+      display: block;
+      transition: color 0.15s;
+      font-weight: 500;
+    }
+    .eb-nav a:hover { color: var(--coral); }
+    .eb-nav a.active {
+      color: var(--text-primary);
+      background: var(--border);
+      border-radius: 3px;
+    }
+
+    /* ── Hero ───────────────────────────────────────────── */
+    .eb-hero {
+      background: var(--coral-bg);
+      padding: 3.5rem 3rem 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 400px;
+      gap: 1.25rem;
+      align-items: start;
+      border-bottom: 1px solid var(--coral-border);
+    }
+    .eb-hero-name {
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--coral-ink);
+      margin-bottom: 0.65rem;
+    }
+    .eb-hero-headline {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--coral-dark);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.015em;
+    }
+    .eb-hero-title {
+      font-size: 11px;
+      color: var(--coral);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .eb-hero-body {
+      font-size: 13px;
+      color: var(--coral-deeper);
+      line-height: 1.85;
+    }
+
+    /* ── Contact card: horizontal — details | photo ─────── */
+    .eb-contact-card {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      background: var(--bg);
+      border: 2px solid var(--coral-border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .eb-contact-details {
+      flex: 1;
+      padding: 1rem 1.1rem;
+      min-width: 200px;
+      border-right: 2px solid var(--coral-border);
+    }
+    .eb-contact-photo {
+      width: 200px;
+      overflow: hidden;
+    }
+    .eb-contact-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      transform: translate3d(0, 0, 1px); 
+    }
+    .eb-cl {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+      margin-top: 10px;
+    }
+    .eb-cl:first-child { margin-top: 0; }
+    .eb-cv { font-size: 11.5px; color: var(--text-secondary); line-height: 1.55; }
+    .eb-cv a { color: var(--coral); text-decoration: none; }
+    .eb-cv a:hover { text-decoration: underline; }
+
+    /* ── Stats row — centered text ──────────────────────── */
+    .eb-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--border);
+    }
+    .eb-stat {
+      padding: 1.75rem 2.5rem;
+      border-right: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .eb-stat:last-child { border-right: none; }
+    .eb-stat-n {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--coral);
+      line-height: 1;
+    }
+    .eb-stat-l {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* Auto-swapping verticals stat card (no hover) */
+    .eb-stat-auto .eb-stat-default {
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .eb-stat-auto .eb-stat-reveal {
+      position: absolute;
+      inset: 0;
+      padding: 1.25rem 1.25rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: center;
+      gap: 7px 0;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.5s, transform 0.5s;
+      pointer-events: none;
+    }
+    .eb-stat-auto.is-revealed .eb-stat-default { opacity: 0; transform: translateY(-8px); }
+    .eb-stat-auto.is-revealed .eb-stat-reveal  { opacity: 1; transform: translateY(0); }
+
+    .eb-reveal-item {
+      display: contents;
+    }
+    .eb-reveal-cat {
+      font-size: 11px;
+      color: var(--coral);
+      font-weight: 600;
+      text-align: right;
+      padding-right: 0.6rem;
+    }
+    .eb-reveal-co {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-align: left;
+      padding-left: 0.6rem;
+      border-left: 1px solid var(--border);
+    }
+
+    /* ── Sections ───────────────────────────────────────── */
+    .eb-sec {
+      padding: 3rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 88px;
+    }
+    .eb-sec-eyebrow {
+      font-size: 11px;
+      color: var(--coral);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .eb-sec-h {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--text-primary);
+      letter-spacing: -0.015em;
+    }
+
+    /* ── Experience timeline ────────────────────────────── */
+    .eb-tl { position: relative; padding-left: 1.75rem; }
+    .eb-tl::before {
+      content: '';
+      position: absolute;
+      left: 5px; top: 6px; bottom: 0;
+      width: 1px;
+      background: var(--border-mid);
+    }
+    .eb-tl-item { position: relative; margin-bottom: 2.5rem; }
+    .eb-tl-item:last-child { margin-bottom: 0; }
+    .eb-dot {
+      position: absolute;
+      left: -1.75rem;
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--coral);
+      border: 2px solid var(--bg);
+      outline: 1px solid var(--coral);
+    }
+    .eb-tl-date { font-size: 11px; color: var(--text-tertiary); margin-bottom: 3px; font-weight: 500; }
+    .eb-tl-role { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+    .eb-tl-co   { font-size: 12px; color: var(--coral); margin-bottom: 10px; font-style: italic; }
+    .eb-tl-body { font-size: 13px; color: var(--text-secondary); line-height: 1.75; }
+    .eb-tl-body ul { padding-left: 1.15rem; }
+    .eb-tl-body li { margin-bottom: 5px; }
+    .eb-client-tag {
+      font-family: monospace;
+      display: inline-block;
+      background: var(--coral-bg);
+      color: var(--coral-dark);
+      font-size: 10px;
+      padding: 1px 4px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+      font-style: normal;
+    }
+
+    /* ── Skills grid: 3-column × 2-row ─────────────────── */
+    .eb-skill-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .eb-skill-block { background: var(--bg); padding: 1rem 1.1rem; }
+    .eb-skill-cat {
+      font-size: 10px;
+      color: var(--coral);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .eb-skill-item {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 3px 0;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5;
+    }
+    .eb-skill-item:last-child { border-bottom: none; }
+
+    /* ── Education ──────────────────────────────────────── */
+    .eb-edu-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .eb-edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .eb-edu-yr { font-size: 11px; color: var(--text-tertiary); font-weight: 500; min-width: 80px; padding-top: 2px; }
+    .eb-edu-qual { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .eb-edu-inst { font-size: 12px; color: var(--coral); margin-bottom: 6px; font-style: italic; }
+    .eb-edu-det { font-size: 12.5px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── Hobbies ────────────────────────────────────────── */
+    .eb-hob-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .eb-hob-card {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-align: center;
+      transition: border-color 0.15s;
+    }
+    .eb-hob-card:hover { border-color: var(--coral-mid); }
+    .eb-hob-icon { font-size: 28px; color: var(--coral); margin-bottom: 0.75rem; display: block; }
+    .eb-hob-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    .eb-hob-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ── CTA / Contact ──────────────────────────────────── */
+    .eb-cta {
+      background: var(--coral-bg);
+      padding: 2.5rem 3rem;
+      border-top: 1px solid var(--coral-border);
+      scroll-margin-top: 88px;
+    }
+    .eb-cta h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--coral-ink);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .eb-cta p { font-size: 13px; color: var(--coral-deeper); }
+    .eb-cta a { color: var(--coral-dark); text-decoration: none; }
+    .eb-cta a:hover { text-decoration: underline; }
+
+    /* ── Responsive ─────────────────────────────────────── */
+    @media (max-width: 767px) {
+      .eb-hero-name { font-size: 42px; white-space: normal; }
+      .eb-hero { padding: 2.5rem 2rem; }
+    }
+    @media (max-width: 900px) {
+      .eb-hero { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 767px) {
+      .eb-nav { padding: 0 1.5rem; }
+      .eb-nav a { padding: 0.85rem 0.6rem; font-size: 11px; }
+
+      /* Hero: single column — deck then contact card below */
+      .eb-hero {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+      }
+      .eb-hero-name { font-size: 36px; white-space: normal; }
+      .eb-hero-headline { font-size: 19px; }
+
+      /* Contact card below deck: keep horizontal, full photo width */
+      .eb-contact-card { flex-direction: row; }
+      .eb-contact-photo { width: 200px; }
+
+      .eb-stats { grid-template-columns: 1fr; }
+      .eb-stat { border-right: none; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; }
+      .eb-stat:last-child { border-bottom: none; }
+
+      .eb-sec { padding: 2rem 1.5rem; }
+      .eb-cta { padding: 2rem 1.5rem; }
+
+      .eb-hob-grid { grid-template-columns: 1fr; }
+      .eb-skill-grid { grid-template-columns: 1fr 1fr; }
+
+      .eb-edu-item { flex-direction: column; gap: 0.25rem; }
+    }
+
+    @media (max-width: 767px) {
+      .eb-hero-name { font-size: 28px; }
+      .eb-hero-headline { font-size: 16px; }
+      .eb-sec-h { font-size: 20px; }
+      .eb-skill-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="eb-page">
+
+  <nav class="eb-nav">
+    <a href="#eb-exp">Experience</a>
+    <a href="#eb-skills">Skills</a>
+    <a href="#eb-edu">Education</a>
+    <a href="#eb-about">About</a>
+    <a href="#eb-contact">Contact</a>
+    <a href="https://www.linkedin.com/in/harmonytsl" target="_blank">LinkedIn</a>
+  </nav>
+
+  <section class="eb-hero">
+    <div>
+      <h1 class="eb-hero-name">Harmony Tan Shi Le</h1>
+      <p class="eb-hero-headline">Building things that work for real people.</p>
+      <p class="eb-hero-title">Senior Software Engineer · Project Team Lead</p>
+      <p class="eb-hero-body">8 years of enterprise-level experience delivering precision-built digital products within a premier user consultancy. Biomedical engineering foundation meets full-stack execution — shipping mobile apps, subscription systems, insurance platforms, and e-commerce infrastructure for Tatler Asia, Astro, AIG, and Cards &amp; Hobbies.</p>
+    </div>
+    <!-- Details on the left, photo on the right -->
+    <div class="eb-contact-card">
+      <div class="eb-contact-details">
+        <div class="eb-cl">Email</div>
+        <div class="eb-cv"><a href="mailto:harmonytan7@gmail.com">harmonytan7@gmail.com</a></div>
+        <div class="eb-cl">Phone</div>
+        <div class="eb-cv">+6012 629 3617</div>
+        <div class="eb-cl">Location</div>
+        <div class="eb-cv">Selangor, Malaysia</div>
+        <div class="eb-cl">Core Stack</div>
+        <div class="eb-cv">React · React Native<br>Vue · TypeScript · AWS</div>
+      </div>
+      <div class="eb-contact-photo">
+        <img src="./photo.jpg" alt="Harmony Tan Shi Le">
+      </div>
+    </div>
+  </section>
+
+  <div class="eb-stats">
+    <div class="eb-stat">
+      <div class="eb-stat-n">8</div>
+      <div class="eb-stat-l">years of enterprise experience</div>
+    </div>
+    <!-- Auto-swaps between number view and industry list every 5s -->
+    <div class="eb-stat eb-stat-auto" id="eb-stat-industries">
+      <div class="eb-stat-default">
+        <div class="eb-stat-n">4</div>
+        <div class="eb-stat-l">industry verticals delivered</div>
+      </div>
+      <div class="eb-stat-reveal" aria-hidden="true">
+        <div class="eb-reveal-item"><span class="eb-reveal-cat">Media</span><span class="eb-reveal-co">Tatler Asia</span></div>
+        <div class="eb-reveal-item"><span class="eb-reveal-cat">Entertainment</span><span class="eb-reveal-co">Astro</span></div>
+        <div class="eb-reveal-item"><span class="eb-reveal-cat">Insurance</span><span class="eb-reveal-co">AIG</span></div>
+        <div class="eb-reveal-item"><span class="eb-reveal-cat">E-Commerce</span><span class="eb-reveal-co">Cards &amp; Hobbies</span></div>
+      </div>
+    </div>
+    <div class="eb-stat">
+      <div class="eb-stat-n">3.79</div>
+      <div class="eb-stat-l">CGPA · 5× Dean's List</div>
+    </div>
+  </div>
+
+  <!-- ── Experience ──────────────────────────────────────── -->
+  <section class="eb-sec" id="eb-exp">
+    <div class="eb-sec-eyebrow">Experience</div>
+    <h2 class="eb-sec-h">Where I've worked, and what I've shipped.</h2>
+    <div class="eb-tl">
+
+      <div class="eb-tl-item">
+        <div class="eb-dot"></div>
+        <div class="eb-tl-date">2022 — Present</div>
+        <div class="eb-tl-role">Senior Software Engineer &amp; Project Team Lead</div>
+        <div class="eb-tl-co">Netizen Testing Sdn Bhd · Selangor, Malaysia</div>
+        <div class="eb-tl-body">
+          <ul>
+            <li><strong>Project Team Leadership:</strong> Appointed primary PIC for major enterprise clients; managed product alignments, technical feature definitions, task distribution, and cross-functional resource allocation.</li>
+            <li><strong>Mobile Product Launch</strong> <span class="eb-client-tag">Tatler Asia</span>: Architected the frontend and delivered a brand-new cross-platform mobile application within 6 months using React Native and Expo for iOS and Android.</li>
+            <li><strong>Global Platform Localization</strong> <span class="eb-client-tag">Tatler Asia</span>: Maintained core enterprise web architecture, ensuring optimal uptime and seamless content delivery across intricate localisation frameworks spanning 8 regional markets.</li>
+            <li><strong>Digital Product Innovation</strong> <span class="eb-client-tag">Tatler Asia</span>: Developed the frontend for signature annual editorial lists and flagship awards, transforming legacy high-value media properties into engaging, modern web experiences.</li>
+            <li><strong>Analytics Architecture:</strong> Designed advanced deep-linking configurations, collaborating with stakeholders on performance tracking and user adoption analytics specifications.</li>
+            <li><strong>Technical Recruitment:</strong> Core member of the technical hiring team — vetting portfolios, designing code assessments, and conducting interviews to scale engineering talent.</li>
+            <li><strong>Team Onboarding:</strong> Standardised a technical training framework for incoming developers, significantly reducing time-to-productivity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="eb-tl-item">
+        <div class="eb-dot"></div>
+        <div class="eb-tl-date">2017 — 2022</div>
+        <div class="eb-tl-role">Software Engineer</div>
+        <div class="eb-tl-co">Netizen Testing Sdn Bhd · Selangor, Malaysia</div>
+        <div class="eb-tl-body">
+          <ul>
+            <li><strong>Subscription Platform</strong> <span class="eb-client-tag">Astro</span>: Spearheaded frontend for a high-priority subscription bundling channel across streaming and traditional TV packages under tight launch deadlines.</li>
+            <li><strong>Pricing Engine</strong> <span class="eb-client-tag">Astro</span>: Engineered a dynamic plan-price calculation engine from complex rate cards, enabling non-technical teams to configure package permutations without code changes.</li>
+            <li><strong>Insurance Platform</strong> <span class="eb-client-tag">AIG</span>: Built core frontend modules with payment gateways, dynamic quoting, and automated policy issuance for a digital travel insurance platform.</li>
+            <li><strong>Backend APIs</strong> <span class="eb-client-tag">AIG</span>: Designed and built custom APIs to interface with external web services, optimising payload consumption and automating policy tracking for compliance.</li>
+            <li><strong>E-Commerce Backend Architecture</strong> <span class="eb-client-tag">Cards &amp; Hobbies</span>: Developed the backend architecture for cardsandhobbies.com (a digital TCG platform), leveraging AWS services including CloudFormation, API Gateway, Lambda, DynamoDB, and S3 to transition a traditional offline business model into a fully integrated online store.</li>
+            <li><strong>Inventory &amp; Order Management Automation</strong> <span class="eb-client-tag">Cards &amp; Hobbies</span>: Formulated transactional backend scripts to handle complex backorders, pre-orders, and automated stock inventory corrections — providing the core systems that sustained the platform's digital operations since its launch.</li>
+            <li><strong>UX Insight Translation:</strong> Attended moderated user testing sessions, translating behavioral insights and friction points into clean, performance-optimised code.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="eb-tl-item">
+        <div class="eb-dot"></div>
+        <div class="eb-tl-date">2013 — 2016</div>
+        <div class="eb-tl-role">Biomedical Engineering Intern &amp; Research Assistant</div>
+        <div class="eb-tl-co">Lazcorp Rehabilitation · UMMC · University of Malaya</div>
+        <div class="eb-tl-body">Prosthetics &amp; orthotics device operations at Lazcorp. Rehabilitation Medicine and Orthopedic Surgery exposure at UMMC. Research data management under UMRG and UM HIR grants.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skills ──────────────────────────────────────────── -->
+  <section class="eb-sec" id="eb-skills">
+    <div class="eb-sec-eyebrow">Skills</div>
+    <h2 class="eb-sec-h">What's in my toolkit.</h2>
+    <div class="eb-skill-grid">
+      <div class="eb-skill-block">
+        <div class="eb-skill-cat">Frontend &amp; Mobile</div>
+        <div class="eb-skill-item">React</div>
+        <div class="eb-skill-item">React Native + Expo</div>
+        <div class="eb-skill-item">Vue.js</div>
+        <div class="eb-skill-item">TypeScript · JavaScript</div>
+        <div class="eb-skill-item">HTML5 · CSS3</div>
+      </div>
+      <div class="eb-skill-block">
+        <div class="eb-skill-cat">Backend &amp; Systems</div>
+        <div class="eb-skill-item">RESTful API Design</div>
+        <div class="eb-skill-item">Serverless Architecture</div>
+        <div class="eb-skill-item">CMS Integration</div>
+        <div class="eb-skill-item">Database Management</div>
+      </div>
+      <div class="eb-skill-block">
+        <div class="eb-skill-cat">Cloud &amp; Infrastructure</div>
+        <div class="eb-skill-item">AWS CloudFormation</div>
+        <div class="eb-skill-item">API Gateway · Lambda</div>
+        <div class="eb-skill-item">DynamoDB · S3</div>
+        <div class="eb-skill-item">Transactional Scripting</div>
+      </div>
+      <div class="eb-skill-block">
+        <div class="eb-skill-cat">Leadership</div>
+        <div class="eb-skill-item">Agile Task Distribution</div>
+        <div class="eb-skill-item">Technical Interviewing</div>
+        <div class="eb-skill-item">Stakeholder Alignment</div>
+        <div class="eb-skill-item">Onboarding Frameworks</div>
+      </div>
+      <div class="eb-skill-block">
+        <div class="eb-skill-cat">UX &amp; Analytics</div>
+        <div class="eb-skill-item">Analytics Specifications</div>
+        <div class="eb-skill-item">Performance Event Tracking</div>
+        <div class="eb-skill-item">UX Insight Optimisation</div>
+        <div class="eb-skill-item">User Testing Observation</div>
+      </div>
+      <div class="eb-skill-block">
+        <div class="eb-skill-cat">CAD &amp; Design</div>
+        <div class="eb-skill-item">Autodesk AutoCAD</div>
+        <div class="eb-skill-item">Fusion 360</div>
+        <div class="eb-skill-item">SolidWorks</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education ───────────────────────────────────────── -->
+  <section class="eb-sec" id="eb-edu">
+    <div class="eb-sec-eyebrow">Education</div>
+    <h2 class="eb-sec-h">Where I started, and what shaped me.</h2>
+
+    <div class="eb-edu-item">
+      <div class="eb-edu-yr">2013 – 2017</div>
+      <div>
+        <div class="eb-edu-qual">BEng Biomedical Engineering (Prosthetics &amp; Orthotics)</div>
+        <div class="eb-edu-inst">University of Malaya · Kuala Lumpur</div>
+        <div class="eb-edu-det">Final CGPA 3.79 — 5× Dean's List recipient. Class Representative for the entire 2013 intake.</div>
+      </div>
+    </div>
+
+    <div class="eb-edu-item">
+      <div class="eb-edu-yr">2011 – 2012</div>
+      <div>
+        <div class="eb-edu-qual">Malaysian Higher School Certificate (STPM)</div>
+        <div class="eb-edu-inst">SMK Seafield · Selangor</div>
+        <div class="eb-edu-det">2A's, 1A-, 1B+. Distinction in R&amp;D Project 2012. MUET Band 5.</div>
+      </div>
+    </div>
+
+    <div class="eb-edu-item">
+      <div class="eb-edu-yr">2006 – 2010</div>
+      <div>
+        <div class="eb-edu-qual">Malaysian Certificate of Education (SPM) &amp; GCE O-Levels</div>
+        <div class="eb-edu-inst">SMK USJ 12 · Selangor</div>
+        <div class="eb-edu-det">6A+'s, 3A's in SPM. "A" distinction in GCE Ordinary Level English.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About / Hobbies ─────────────────────────────────── -->
+  <section class="eb-sec" id="eb-about">
+    <div class="eb-sec-eyebrow">About</div>
+    <h2 class="eb-sec-h">Outside the screen.</h2>
+    <div class="eb-hob-grid">
+      <div class="eb-hob-card">
+        <i class="ti ti-puzzle eb-hob-icon" aria-hidden="true"></i>
+        <div class="eb-hob-title">Model Building</div>
+        <div class="eb-hob-desc">Casual precision model builder in articulated plastic kits (Bandai) and mechanical wooden structural puzzles (ROKR). Patience and craft in physical form.</div>
+      </div>
+      <div class="eb-hob-card">
+        <i class="ti ti-coffee eb-hob-icon" aria-hidden="true"></i>
+        <div class="eb-hob-title">Specialty Coffee</div>
+        <div class="eb-hob-desc">Home brewer exploring different extraction methods and single-origin roasts. A pursuit of precision in a cup.</div>
+      </div>
+      <div class="eb-hob-card">
+        <i class="ti ti-music eb-hob-icon" aria-hidden="true"></i>
+        <div class="eb-hob-title">Music</div>
+        <div class="eb-hob-desc">Studied piano formally, passing with Merit in ABRSM Grade 8 Piano and Grade 8 Theory of Music (2010). Enjoys singing.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact CTA ─────────────────────────────────────── -->
+  <footer class="eb-cta" id="eb-contact">
+    <h2>Open to strategic opportunities in engineering leadership, team management, and digital product delivery.</h2>
+    <p>
+      <a href="mailto:harmonytan7@gmail.com">harmonytan7@gmail.com</a>
+      · +6012 629 3617
+      · Selangor, Malaysia
+      · <a href="https://www.linkedin.com/in/harmonytsl" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+</div><!-- /.eb-page -->
+
+<script>
+  // Nav smooth scroll with offset so eyebrow clears the sticky bar
+  document.querySelectorAll('.eb-nav a').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        const navH = document.querySelector('.eb-nav').offsetHeight;
+        const top = el.getBoundingClientRect().top + window.scrollY - navH - 40;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Active nav link based on scroll position
+  const navSectionIds = ['eb-exp', 'eb-skills', 'eb-edu', 'eb-about', 'eb-contact'];
+  const navLinkMap = {};
+  document.querySelectorAll('.eb-nav a').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    navLinkMap[id] = a;
+  });
+
+  function updateActiveNav() {
+    const center = window.scrollY + window.innerHeight / 2;
+    let activeId = null;
+    let closestDist = Infinity;
+    for (const id of navSectionIds) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const top = el.offsetTop;
+      const bottom = top + el.offsetHeight;
+      if (center >= top && center < bottom) {
+        activeId = id;
+        break;
+      }
+      const dist = Math.min(Math.abs(center - top), Math.abs(center - bottom));
+      if (dist < closestDist) { closestDist = dist; activeId = id; }
+    }
+    Object.entries(navLinkMap).forEach(([id, a]) => {
+      a.classList.toggle('active', id === activeId);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+
+  // Auto-swap industry verticals stat card every 5 seconds
+  const statCard = document.getElementById('eb-stat-industries');
+  if (statCard) {
+    let revealed = false;
+    setInterval(() => {
+      revealed = !revealed;
+      statCard.classList.toggle('is-revealed', revealed);
+    }, 5000);
+  }
+</script>
+</body>
+</html>
